@@ -1,0 +1,98 @@
+/* Navbar background and text color */
+.navbar-custom {
+  background-color: #9dbcdb; /* Dark background color */
+  color: #ffffff; /* White text color */
+}
+
+/* Brand logo and text */
+.navbar-custom .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Center the brand */
+.navbar-custom .navbar-brand.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-custom .navbar-brand img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.navbar-custom .navbar-brand b {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Nav links */
+.navbar-custom .nav-link {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #adb5bd; /* Light gray color on hover */
+}
+
+/* Add gap between nav items */
+.navbar-custom .nav-link.mx-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Search bar */
+.navbar-custom .form-inline .form-control {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.navbar-custom .form-inline .btn {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* User welcome message or sign-up link */
+.navbar-custom .nav-item .text-white {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Add gap between nav items */
+.navbar-custom .nav-item.mx-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Responsive text scaling */
+@media (max-width: 768px) {
+  .navbar-custom .navbar-brand b {
+    font-size: 1.2rem;
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .navbar-custom .form-inline .form-control {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-custom .navbar-brand b {
+    font-size: 1rem;
+  }
+
+  .navbar-custom .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .navbar-custom .form-inline .form-control {
+    width: 120px;
+  }
+}

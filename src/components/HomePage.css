@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.background-image {
+  width: 100%;
+  height: 350px; 
+  background-image: url('https://www.foresthomesstore.com/cdn/shop/files/Island-Home-Mural-Wallpaper.jpg?v=1690919173'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center 80%; 
+}
+
+.homepage h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.homepage p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.homepage {
+  background-color: rgb(7, 44, 61);
+  color: rgb(117, 150, 179);
+  padding: 0;
+  margin: 0;
+}

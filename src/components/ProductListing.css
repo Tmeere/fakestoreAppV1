@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Adjust the font size for different screen sizes */
+.card-title, .card-text {
+  font-size: 1rem; /* Default font size */
+}
+
+@media (max-width: 576px) {
+  .product-image {
+    height: 200px; /* Adjust the height for small screens */
+  }
+  .card-title, .card-text {
+    font-size: 0.8rem; /* Smaller font size for small screens */
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .product-image {
+    height: 250px; /* Adjust the height for medium screens */
+  }
+  .card-title, .card-text {
+    font-size: 0.9rem; /* Slightly smaller font size for medium screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .product-image {
+    height: 300px; /* Adjust the height for large screens */
+  }
+  .card-title, .card-text {
+    font-size: 1rem; /* Default font size for large screens */
+  }
+}
+
+@media (min-width: 993px) {
+  .product-image {
+    height: 350px; /* Adjust the height for extra large screens */
+  }
+  .card-title, .card-text {
+    font-size: 1 rem; /* Slightly larger font size for extra large screens */
+  }
+}
+
+.product-listing {
+  color: rgb(222, 246, 255);
+  background-color: rgba(83, 83, 83, 0.411);
+  border-radius: 10px;
+}
+
