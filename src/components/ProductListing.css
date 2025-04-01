@@ -2,6 +2,16 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
@@ -9,11 +19,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .product-image {
   width: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .text-truncate {
@@ -22,44 +34,53 @@
   text-overflow: ellipsis;
 }
 
-/* Adjust the font size for different screen sizes */
-.card-title, .card-text {
-  font-size: 1rem; /* Default font size */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
 
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
 @media (max-width: 576px) {
   .product-image {
-    height: 200px; /* Adjust the height for small screens */
+    height: 200px;
   }
   .card-title, .card-text {
-    font-size: 0.8rem; /* Smaller font size for small screens */
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
   .product-image {
-    height: 250px; /* Adjust the height for medium screens */
+    height: 250px;
   }
   .card-title, .card-text {
-    font-size: 0.9rem; /* Slightly smaller font size for medium screens */
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
   .product-image {
-    height: 300px; /* Adjust the height for large screens */
+    height: 300px;
   }
   .card-title, .card-text {
-    font-size: 1rem; /* Default font size for large screens */
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 993px) {
   .product-image {
-    height: 350px; /* Adjust the height for extra large screens */
+    height: 350px;
   }
   .card-title, .card-text {
-    font-size: 1 rem; /* Slightly larger font size for extra large screens */
+    font-size: 1.2rem;
   }
 }
 
@@ -67,5 +88,25 @@
   color: rgb(222, 246, 255);
   background-color: rgba(83, 83, 83, 0.411);
   border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
 }
 
+.product-listing .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-listing .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}

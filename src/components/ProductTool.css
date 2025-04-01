@@ -23,8 +23,8 @@
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    max-width: 300px; /* Reduce the width of the tools */
-    margin: 0 auto; /* Center the tools */
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .product-tool .product-section h1 {
@@ -44,7 +44,7 @@
 .product-tool .product-section form label {
     font-weight: bold;
     margin-bottom: 5px;
-    display: block; /* Make the label span the whole width */
+    display: block;
 }
 
 .product-tool .product-section form input,
@@ -54,7 +54,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    width: 100%; /* Make the input elements span the whole width */
+    width: 100%;
 }
 
 .product-tool .product-section form button {

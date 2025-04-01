@@ -1,18 +1,75 @@
 .product-information {
-    color: aliceblue;
-    background-color: rgba(110, 110, 110, 0.555);
-    border-radius: 15px;
-  }
-  
-  .product-information .card-title{
-    color: rgb(48, 99, 146);
-  }
-  .product-information .card-text {
-    color: rgb(0, 0, 0);
+  color: aliceblue;
+  background-color: rgba(110, 110, 110, 0.555);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.product-information:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.product-information .card-title {
+  color: rgb(48, 99, 146);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.product-information .card-text {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.product-information img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-information .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: rgb(48, 99, 146);
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-information .btn:hover {
+  background-color: rgb(30, 80, 120);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .product-information {
+    padding: 15px;
+    max-width: 100%;
   }
 
-  .product-information img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .product-information .card-title {
+    font-size: 1.5rem;
   }
+
+  .product-information .card-text {
+    font-size: 1rem;
+  }
+}

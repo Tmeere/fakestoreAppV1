@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button, Spinner } from "react-bootstrap";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./ProductListing.css"; // Import the CSS file
@@ -7,6 +7,7 @@ import "./ProductListing.css"; // Import the CSS file
 function ProductListing({ title, totalProducts, showButton = true }) {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true); // State to track loading
 
   useEffect(() => {
     axios
@@ -14,11 +15,13 @@ function ProductListing({ title, totalProducts, showButton = true }) {
       .then((response) => {
         setProducts(response.data);
         setError(false);
+        setLoading(false); // Stop loading once data is fetched
       })
       .catch((error) => {
         console.error("There was an error fetching the products!", error);
         setProducts([]);
         setError(true);
+        setLoading(false); // Stop loading on error
       });
   }, []);
 
@@ -39,12 +42,21 @@ function ProductListing({ title, totalProducts, showButton = true }) {
         </Button>
       )}
       <Row className="py-3">
-        {error ? (
+        {loading ? (
+          <Col className="text-center">
+            <Spinner animation="border" role="status" variant="primary">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            <p>Loading products...</p>
+          </Col>
+        ) : error ? (
           <Col>
             <Card>
               <Card.Body>
                 <Card.Title className="text-danger">Product Not Found</Card.Title>
-                <Card.Text className="text-danger">There was an error fetching the products. Please try again later.</Card.Text>
+                <Card.Text className="text-danger">
+                  There was an error fetching the products. Please try again later.
+                </Card.Text>
               </Card.Body>
             </Card>
           </Col>
